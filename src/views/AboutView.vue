@@ -1,15 +1,17 @@
+<script setup>
+import SearchableInputText from '@/components/SearchableInputText.vue';
+import {ref} from 'vue'
+const data = ref([]);
+data.value=["a","b","c"];
+
+</script>
+
+
 <template>
   <div class="about">
     <h1>This is an about page</h1>
+    <SearchableInputText title="about title" likes=10 :data="{data}" />
   </div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+<style></style>
